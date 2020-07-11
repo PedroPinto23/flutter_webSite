@@ -1,60 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/barra_produtos.dart';
-import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/barra_saldo.dart';
+import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/barra_produtos.dart';
+import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/barra_saldo.dart';
+import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/form_cod_barras.dart';
+import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/form_num_cartao.dart';
+import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/tabela_botoes.dart';
 
 class ProdutosCozinha extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-      margin: EdgeInsets.all(5),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Expanded(
-                flex: 3,
-                child: Card(
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "Nº Cartão",
-                    ),
-                  ),
+    return Card(
+      elevation: 10,
+      color: Colors.grey[350],
+      child: Padding(
+        padding: EdgeInsets.all(5.0),
+        child: ListView(
+          children: [
+            formNumCartao(),
+            formCodBarras(),
+            barraProdutos(),
+            Container(
+              height: 200,
+            ),
+            Card(
+              child: TextFormField(
+                maxLines: 2,
+                decoration: InputDecoration(
+                  hintText: "Obs: Cozinha",
                 ),
               ),
-              Expanded(
-                flex: 2,
-                child: Card(
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "R\$0,00",
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Card(
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: "Código,nome ou código de barras",
-              ),
             ),
-          ),
-          barraProdutos(),
-          Container(
-            height: 200,
-          ),
-          Card(
-            child: TextFormField(
-              maxLines: 2,
-              decoration: InputDecoration(
-                hintText: "Obs: Cozinha",
-              ),
-            ),
-          ),
-          barraSaldo(),
-        ],
+            barraSaldo(),
+            TabelaBotoes(),
+          ],
+        ),
       ),
     );
   }

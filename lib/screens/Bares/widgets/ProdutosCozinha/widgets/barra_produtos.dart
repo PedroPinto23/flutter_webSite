@@ -4,6 +4,7 @@ Widget barraProdutos() {
   return Container(
     color: Colors.white,
     margin: EdgeInsets.all(4),
+    padding: EdgeInsets.all(5),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

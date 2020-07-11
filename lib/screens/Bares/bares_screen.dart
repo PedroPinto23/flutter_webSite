@@ -8,12 +8,22 @@ class Bares extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(top: 15, bottom: 15, left: 8, right: 8),
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     colors: [
+        //       Colors.blue[500],
+        //       Colors.yellowAccent,
+        //     ],
+        //     begin: Alignment.centerLeft,
+        //     end: Alignment.centerRight,
+        //   ),
+        // ),
+        padding: EdgeInsets.all(8),
         child: Row(
           children: [
-            Expanded(child: ProdutosCozinha()),
-            Expanded(child: ResumoVenda()),
-            Expanded(child: ProdutosTabela()),
+            Expanded(flex: 2, child: ProdutosCozinha()),
+            Expanded(flex: 1, child: ResumoVenda()),
+            Expanded(flex: 2, child: ProdutosTabela()),
           ],
         ),
       ),
