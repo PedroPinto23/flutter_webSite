@@ -27,7 +27,15 @@ class ResumoVenda extends StatelessWidget {
               ),
             ),
             Comprovante(),
+            Divider(
+              thickness: 1,
+              color: Colors.black,
+            ),
             Comprovante(),
+            Divider(
+              thickness: 1,
+              color: Colors.black,
+            ),
             Comprovante(),
           ],
         ),

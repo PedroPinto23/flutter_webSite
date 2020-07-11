@@ -15,7 +15,7 @@ class TabelaBotoes extends StatelessWidget {
                     color: Colors.green[600],
                     onPressed: () {},
                     child: Text(
-                      "Vendas",
+                      "Venda",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -48,7 +48,7 @@ class TabelaBotoes extends StatelessWidget {
                     color: Colors.grey[600],
                     onPressed: () {},
                     child: Text(
-                      "Estornar vendas",
+                      "Estornar venda",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

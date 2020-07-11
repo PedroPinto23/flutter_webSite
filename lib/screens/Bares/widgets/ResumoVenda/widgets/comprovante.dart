@@ -15,11 +15,19 @@ class Comprovante extends StatelessWidget {
             title: Text("Senha"),
             subtitle: Text("0234213"),
           ),
+          Divider(
+            height: 0,
+            thickness: 1,
+          ),
           ListTile(
             hoverColor: Colors.blue,
             contentPadding: EdgeInsets.symmetric(horizontal: 2.0),
             title: Text("Cartão"),
             subtitle: Text("1468654115"),
+          ),
+          Divider(
+            height: 0,
+            thickness: 1,
           ),
           ListTile(
             hoverColor: Colors.blue,
@@ -27,11 +35,19 @@ class Comprovante extends StatelessWidget {
             title: Text("Data"),
             subtitle: Text("14/08/2020"),
           ),
+          Divider(
+            height: 0,
+            thickness: 1,
+          ),
           ListTile(
             hoverColor: Colors.blue,
             contentPadding: EdgeInsets.symmetric(horizontal: 2.0),
             title: Text("Hora"),
             subtitle: Text("16:09:58"),
+          ),
+          Divider(
+            height: 0,
+            thickness: 1,
           ),
           ListTile(
             hoverColor: Colors.blue,
@@ -39,10 +55,6 @@ class Comprovante extends StatelessWidget {
             title: Text("Empresa"),
             subtitle: Text("PRACA"),
           ),
-          Divider(
-            thickness: 1,
-            color: Colors.black,
-          )
         ],
       ),
     );

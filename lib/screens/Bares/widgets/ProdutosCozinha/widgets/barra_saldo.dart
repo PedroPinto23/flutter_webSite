@@ -27,30 +27,33 @@ Widget barraSaldo() {
           ),
         ),
         Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text("Imprimir Cupom"),
-                  Checkbox(
-                    onChanged: (bool value) {},
-                    value: true,
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Text("2 vias"),
-                  Checkbox(
-                    onChanged: (bool value) {},
-                    value: false,
-                  ),
-                ],
-              ),
-            ],
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text("Imprimir Cupom"),
+                    Checkbox(
+                      onChanged: (bool value) {},
+                      value: true,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text("2 vias"),
+                    Checkbox(
+                      onChanged: (bool value) {},
+                      value: false,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         )
       ],
