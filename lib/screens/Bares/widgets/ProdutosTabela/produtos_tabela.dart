@@ -4,7 +4,7 @@ import 'package:flutter_website/screens/Bares/widgets/ProdutosTabela/widgets/tab
 class ProdutosTabela extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Card(
       child: DefaultTabController(
         length: 5,
         child: Scaffold(

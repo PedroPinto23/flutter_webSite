@@ -16,8 +16,11 @@ class _BaresState extends State<Bares> {
     return LayoutBuilder(builder: (context, constraints) {
       if (constraints.maxWidth > 600 && constraints.maxWidth < 1024) {
         return Scaffold(
+            backgroundColor: Color.fromARGB(255, 18, 140, 126),
             body: Container(
-                padding: EdgeInsets.all(8),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
+                // padding: EdgeInsets.all(38),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
@@ -39,8 +42,12 @@ class _BaresState extends State<Bares> {
                 )));
       } else if (constraints.maxWidth >= 1024) {
         return Scaffold(
+            backgroundColor: Color.fromARGB(255, 18, 140, 126),
             body: Container(
-                padding: EdgeInsets.all(8),
+                color: Colors.transparent,
+                // decoration: BoxDecoration(
+                //     borderRadius: BorderRadius.all(Radius.circular(45))),
+                padding: EdgeInsets.all(30),
                 child: Row(
                   children: [
                     Expanded(flex: 2, child: ProdutosCozinha()),
@@ -54,6 +61,11 @@ class _BaresState extends State<Bares> {
                 )));
       } else {
         return Scaffold(
+          appBar: AppBar(
+            title: Text("Bares"),
+            centerTitle: true,
+          ),
+          backgroundColor: Color.fromARGB(255, 18, 140, 126),
           body: PageView(
             controller: pageController,
             children: [
@@ -70,27 +82,27 @@ class _BaresState extends State<Bares> {
                 backgroundColor: Colors.blue,
                 icon: Icon(
                   Icons.kitchen,
-                  color: Colors.white,
+                  color: Theme.of(context).primaryColor,
                 ),
                 title: Text("Cozinha"),
               ),
               BottomNavigationBarItem(
                 icon: Icon(
                   Icons.monetization_on,
-                  color: Colors.white,
+                  color: Theme.of(context).primaryColor,
                 ),
                 title: Text("Resumo venda"),
               ),
               BottomNavigationBarItem(
                 icon: Icon(
                   Icons.local_grocery_store,
-                  color: Colors.white,
+                  color: Theme.of(context).primaryColor,
                 ),
                 title: Text("Produtos"),
               ),
             ],
             currentIndex: _selectedIndex,
-            selectedItemColor: Theme.of(context).primaryColor,
+            selectedItemColor: Colors.blue,
             onTap: (int index) {
               setState(() {
                 _selectedIndex = index;
