@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Website',
       theme: ThemeData(
-        primaryColor: Colors.red,
+        primaryColor: Color.fromARGB(255, 7, 94, 84),
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

@@ -3,6 +3,8 @@ import 'package:flutter_website/screens/Bares/widgets/ResumoVenda/widgets/compro
 import 'package:qr_flutter/qr_flutter.dart';
 
 class ResumoVenda extends StatelessWidget {
+  final Axis scrollDirection;
+  ResumoVenda({this.scrollDirection});
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -10,18 +12,13 @@ class ResumoVenda extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView(
+          scrollDirection: scrollDirection,
           children: [
             Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                top: BorderSide(width: 2.0, color: Color(0xFFFF000000)),
-                left: BorderSide(width: 2.0, color: Color(0xFFFF000000)),
-                right: BorderSide(width: 2.0, color: Color(0xFFFF000000)),
-                bottom: BorderSide(width: 2.0, color: Color(0xFFFF000000)),
-              )),
+              alignment: Alignment.topCenter,
               child: QrImage(
                 backgroundColor: Colors.grey[300],
-                data: "Teste QR Code",
+                data: "https://web.whatsapp.com/",
                 version: QrVersions.auto,
                 size: 240,
               ),

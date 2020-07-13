@@ -13,25 +13,27 @@ class ProdutosCozinha extends StatelessWidget {
       color: Colors.grey[350],
       child: Padding(
         padding: EdgeInsets.all(5.0),
-        child: ListView(
-          children: [
-            formNumCartao(),
-            formCodBarras(),
-            barraProdutos(),
-            Container(
-              height: 200,
-            ),
-            Card(
-              child: TextFormField(
-                maxLines: 2,
-                decoration: InputDecoration(
-                  hintText: "Obs: Cozinha",
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              formNumCartao(),
+              formCodBarras(),
+              barraProdutos(),
+              Container(
+                height: 200,
+              ),
+              Card(
+                child: TextFormField(
+                  maxLines: 2,
+                  decoration: InputDecoration(
+                    hintText: "Obs: Cozinha",
+                  ),
                 ),
               ),
-            ),
-            barraSaldo(),
-            TabelaBotoes(),
-          ],
+              BarraSaldo(),
+              TabelaBotoes(),
+            ],
+          ),
         ),
       ),
     );
