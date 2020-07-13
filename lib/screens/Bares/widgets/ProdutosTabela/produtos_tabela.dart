@@ -11,9 +11,7 @@ class ProdutosTabela extends StatelessWidget {
           appBar: AppBar(
             bottom: TabBar(
               labelColor: Colors.white,
-              labelStyle: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
+              labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
               tabs: [
                 Tab(
                   text: ("Bebidas"),

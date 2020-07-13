@@ -16,6 +16,7 @@ class TabelaBotoes extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Venda",
+                      textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -24,6 +25,7 @@ class TabelaBotoes extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Reter cartão",
+                      textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -41,6 +43,7 @@ class TabelaBotoes extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Cancelar",
+                      textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -49,6 +52,7 @@ class TabelaBotoes extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Estornar venda",
+                      textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -66,6 +70,7 @@ class TabelaBotoes extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Operações",
+                      textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -74,6 +79,7 @@ class TabelaBotoes extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Extrato cartão",
+                      textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

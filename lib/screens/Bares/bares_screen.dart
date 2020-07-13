@@ -10,11 +10,21 @@ class Bares extends StatefulWidget {
 
 class _BaresState extends State<Bares> {
   int _selectedIndex = 0;
+
+  void bottomTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      pageController.animateToPage(index,
+          duration: Duration(milliseconds: 500), curve: Curves.ease);
+    });
+  }
+
   PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth > 600 && constraints.maxWidth < 1024) {
+      if (constraints.maxWidth > 700 && constraints.maxWidth < 1200) {
+        print(constraints.biggest);
         return Scaffold(
             backgroundColor: Color.fromARGB(255, 18, 140, 126),
             body: Container(
@@ -40,14 +50,14 @@ class _BaresState extends State<Bares> {
                     ],
                   ),
                 )));
-      } else if (constraints.maxWidth >= 1024) {
+      } else if (constraints.maxWidth >= 1200) {
+        print(constraints.biggest);
         return Scaffold(
             backgroundColor: Color.fromARGB(255, 18, 140, 126),
             body: Container(
                 color: Colors.transparent,
                 // decoration: BoxDecoration(
                 //     borderRadius: BorderRadius.all(Radius.circular(45))),
-                padding: EdgeInsets.all(30),
                 child: Row(
                   children: [
                     Expanded(flex: 2, child: ProdutosCozinha()),
@@ -60,6 +70,7 @@ class _BaresState extends State<Bares> {
                   ],
                 )));
       } else {
+        print(constraints.biggest);
         return Scaffold(
           appBar: AppBar(
             title: Text("Bares"),
@@ -67,6 +78,11 @@ class _BaresState extends State<Bares> {
           ),
           backgroundColor: Color.fromARGB(255, 18, 140, 126),
           body: PageView(
+            onPageChanged: (value) {
+              setState(() {
+                _selectedIndex = value;
+              });
+            },
             controller: pageController,
             children: [
               ProdutosCozinha(),
@@ -104,9 +120,7 @@ class _BaresState extends State<Bares> {
             currentIndex: _selectedIndex,
             selectedItemColor: Colors.blue,
             onTap: (int index) {
-              setState(() {
-                _selectedIndex = index;
-              });
+              bottomTapped(index);
             },
           ),
         );

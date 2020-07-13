@@ -13,24 +13,10 @@ class TabBarProdutos extends StatelessWidget {
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
             ],
           ),
           Row(
             children: [
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
@@ -43,14 +29,18 @@ class TabBarProdutos extends StatelessWidget {
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
             ],
           ),
           Row(
             children: [
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
+              Expanded(child: CardProduto()),
+              Expanded(child: CardProduto()),
+            ],
+          ),
+          Row(
+            children: [
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
               Expanded(child: CardProduto()),
