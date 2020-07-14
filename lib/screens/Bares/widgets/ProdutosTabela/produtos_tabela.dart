@@ -9,8 +9,9 @@ class ProdutosTabela extends StatelessWidget {
         length: 5,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.white,
             bottom: TabBar(
-              labelColor: Colors.white,
+              labelColor: Theme.of(context).primaryColor,
               labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
               tabs: [
                 Tab(
@@ -31,6 +32,7 @@ class ProdutosTabela extends StatelessWidget {
               ],
             ),
           ),
+          backgroundColor: Colors.grey[350],
           body: TabBarView(
             children: [
               TabBarProdutos(),

@@ -10,6 +10,7 @@ class TabelaBotoes extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(5),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   MaterialButton(
                     color: Colors.green[600],
@@ -37,6 +38,7 @@ class TabelaBotoes extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(5),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   MaterialButton(
                     color: Colors.red[600],
@@ -64,6 +66,7 @@ class TabelaBotoes extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(5),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   MaterialButton(
                     color: Colors.orange[600],
