@@ -20,7 +20,7 @@ class ProdutosCozinha extends StatelessWidget {
               formCodBarras(),
               barraProdutos(),
               Container(
-                height: 170,
+                height: MediaQuery.of(context).size.height / 3,
               ),
               Card(
                 child: TextFormField(
