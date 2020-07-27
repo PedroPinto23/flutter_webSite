@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/barra_produtos.dart';
-import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/barra_saldo.dart';
-import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/form_cod_barras.dart';
-import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/form_num_cartao.dart';
-import 'package:flutter_website/screens/Bares/widgets/ProdutosCozinha/widgets/tabela_botoes.dart';
+import 'package:flutter_website/Widgets/ProdutosCozinha/widgets/barra_produtos.dart';
+import 'package:flutter_website/Widgets/ProdutosCozinha/widgets/barra_saldo.dart';
+import 'package:flutter_website/Widgets/ProdutosCozinha/widgets/form_cod_barras.dart';
+import 'package:flutter_website/Widgets/ProdutosCozinha/widgets/form_num_cartao.dart';
+import 'package:flutter_website/Widgets/ProdutosCozinha/widgets/tabela_botoes.dart';
 
 class ProdutosCozinha extends StatelessWidget {
   @override

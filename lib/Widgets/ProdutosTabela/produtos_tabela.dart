@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_website/screens/Bares/widgets/ProdutosTabela/widgets/tab_bar_produtos.dart';
+import 'package:flutter_website/Widgets/ProdutosTabela/widgets/tab_bar_produtos.dart';
 
 class ProdutosTabela extends StatelessWidget {
   @override

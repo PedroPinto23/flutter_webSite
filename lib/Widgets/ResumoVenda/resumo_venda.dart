@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_website/screens/Bares/widgets/ResumoVenda/widgets/comprovante.dart';
+import 'package:flutter_website/Widgets/ResumoVenda/widgets/comprovante.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class ResumoVenda extends StatelessWidget {
