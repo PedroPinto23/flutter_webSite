@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_website/Widgets/ProdutosCozinha/widgets/botao.dart';
 
 class TabelaBotoes extends StatelessWidget {
   @override
@@ -12,23 +13,15 @@ class TabelaBotoes extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  MaterialButton(
-                    color: Colors.green[600],
+                  Botao(
+                    texto: "Venda",
                     onPressed: () {},
-                    child: Text(
-                      "Venda",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
-                    ),
+                    color: Colors.green[600],
                   ),
-                  MaterialButton(
+                  Botao(
                     color: Colors.purple[600],
                     onPressed: () {},
-                    child: Text(
-                      "Reter cartão",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
-                    ),
+                    texto: "Reter cartão",
                   ),
                 ],
               ),
@@ -40,24 +33,16 @@ class TabelaBotoes extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  MaterialButton(
+                  Botao(
                     color: Colors.red[600],
+                    texto: "Cancelar",
                     onPressed: () {},
-                    child: Text(
-                      "Cancelar",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
-                    ),
                   ),
-                  MaterialButton(
+                  Botao(
                     color: Colors.grey[600],
+                    texto: "Estornar venda",
                     onPressed: () {},
-                    child: Text(
-                      "Estornar venda",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -68,23 +53,15 @@ class TabelaBotoes extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  MaterialButton(
+                  Botao(
+                    texto: "Operações",
+                    onPressed: () {},
                     color: Colors.orange[600],
-                    onPressed: () {},
-                    child: Text(
-                      "Operações",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
-                    ),
                   ),
-                  MaterialButton(
-                    color: Colors.blue[600],
+                  Botao(
+                    texto: "Extrato cartão",
                     onPressed: () {},
-                    child: Text(
-                      "Extrato cartão",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
-                    ),
+                    color: Colors.blue[600],
                   ),
                 ],
               ),
