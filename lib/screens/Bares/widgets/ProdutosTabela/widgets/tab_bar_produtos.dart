@@ -1,53 +1,22 @@
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_website/screens/Bares/widgets/ProdutosTabela/widgets/card_produto.dart';
 
 class TabBarProdutos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-              Expanded(child: CardProduto()),
-            ],
-          ),
-        ],
+    Faker faker = Faker();
+    return Container(
+      height: 300,
+      child: GridView.count(
+        childAspectRatio: 1.0,
+        crossAxisCount: 5,
+        children: faker.lorem.words(80).map((e) {
+          return CardProduto(
+            nomeProduto: e,
+            preco: e,
+          );
+        }).toList(),
       ),
     );
   }

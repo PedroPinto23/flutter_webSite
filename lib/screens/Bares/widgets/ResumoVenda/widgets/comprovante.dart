@@ -1,6 +1,36 @@
 import 'package:flutter/material.dart';
 
 class Comprovante extends StatelessWidget {
+  @required
+  final String senha;
+
+  @required
+  final String cartao;
+
+  @required
+  final String data;
+
+  @required
+  final String hora;
+
+  @required
+  final String empresa;
+
+  @required
+  final String valorProduto;
+
+  @required
+  final String nomeProduto;
+  Comprovante({
+    this.senha,
+    this.cartao,
+    this.data,
+    this.hora,
+    this.empresa,
+    this.valorProduto,
+    this.nomeProduto,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -18,7 +48,7 @@ class Comprovante extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                Text("0234213"),
+                Text(senha),
               ],
             ),
             Row(
@@ -27,7 +57,7 @@ class Comprovante extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                Text("1468654115"),
+                Text(cartao),
               ],
             ),
             Row(
@@ -36,7 +66,7 @@ class Comprovante extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                Text("14/08/2020"),
+                Text(data),
               ],
             ),
             Row(
@@ -45,7 +75,7 @@ class Comprovante extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                Text("16:09:58"),
+                Text(hora),
               ],
             ),
             Row(
@@ -54,7 +84,7 @@ class Comprovante extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                Text("PRACA"),
+                Text(empresa),
               ],
             ),
             ListTile(
@@ -62,9 +92,9 @@ class Comprovante extends StatelessWidget {
               hoverColor: Colors.blue,
               contentPadding: EdgeInsets.symmetric(horizontal: 2.0),
               title: Text("Consumo"),
-              subtitle: Text("Nome Produto"),
+              subtitle: Text(nomeProduto),
               trailing: Text(
-                "R\$ 0,00",
+                valorProduto,
                 style: TextStyle(
                   color: Colors.green[900],
                 ),

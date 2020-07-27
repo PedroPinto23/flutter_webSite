@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CardProduto extends StatelessWidget {
+  final String nomeProduto;
+  final String preco;
+  CardProduto({this.nomeProduto, this.preco});
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -14,12 +17,12 @@ class CardProduto extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              "Nome Produto",
+              nomeProduto,
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.teal[500]),
             ),
             Text(
-              "R\$0,00",
+              preco,
               style: TextStyle(color: Colors.teal[500]),
             ),
           ],
