@@ -30,12 +30,14 @@ class ProdutosCozinha extends StatelessWidget {
                   qtdController: qtdController,
                   valorController: valorController),
               Container(
+                  height: 240,
                   padding: EdgeInsets.all(12),
-                  margin: EdgeInsets.symmetric(vertical: 18),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.white),
-                  child: barraProdutos()),
+                  child: SingleChildScrollView(
+                    child: barraProdutos(),
+                  )),
               Card(
                 child: TextFormField(
                   maxLines: 2,

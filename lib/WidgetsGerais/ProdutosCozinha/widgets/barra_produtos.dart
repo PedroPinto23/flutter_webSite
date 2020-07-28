@@ -13,7 +13,7 @@ Widget barraProdutos() {
   /// DADOS FALSOS PARA TESTE
   Faker faker = Faker();
   return DataTable(
-      horizontalMargin: 0,
+      horizontalMargin: 25,
       columns: [
         DataColumn(
             label: Container(
@@ -48,7 +48,7 @@ Widget barraProdutos() {
 
       /// substituir "faker.lorem.words(3)" pelos seus respectivos dados
       rows: faker.lorem
-          .words(3)
+          .words(4)
           .map((e) => dataProdutos(
                 produto: e,
                 preco: e.length.toString(),
