@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Comprovante extends StatelessWidget {
   @required
@@ -33,6 +34,11 @@ class Comprovante extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextStyle style = GoogleFonts.oxygen(
+      fontSize: 15,
+      fontWeight: FontWeight.w600,
+      color: Colors.black,
+    );
     return Card(
       elevation: 5,
       child: Container(
@@ -44,55 +50,55 @@ class Comprovante extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text("Senha: "),
+                Text("Senha: ", style: style),
                 SizedBox(
                   width: 5,
                 ),
-                Text(senha),
+                Text(senha, style: style),
               ],
             ),
             Row(
               children: [
-                Text("Cartão: "),
+                Text("Cartão: ", style: style),
                 SizedBox(
                   width: 5,
                 ),
-                Text(cartao),
+                Text(cartao, style: style),
               ],
             ),
             Row(
               children: [
-                Text("Data: "),
+                Text("Data: ", style: style),
                 SizedBox(
                   width: 5,
                 ),
-                Text(data),
+                Text(data, style: style),
               ],
             ),
             Row(
               children: [
-                Text("Hora: "),
+                Text("Hora: ", style: style),
                 SizedBox(
                   width: 5,
                 ),
-                Text(hora),
+                Text(hora, style: style),
               ],
             ),
             Row(
               children: [
-                Text("Empresa: "),
+                Text("Empresa: ", style: style),
                 SizedBox(
                   width: 5,
                 ),
-                Text(empresa),
+                Text(empresa, style: style),
               ],
             ),
             ListTile(
               focusColor: Colors.blue,
               hoverColor: Colors.blue,
               contentPadding: EdgeInsets.symmetric(horizontal: 2.0),
-              title: Text("Consumo"),
-              subtitle: Text(nomeProduto),
+              title: Text("Consumo", style: style),
+              subtitle: Text(nomeProduto, style: style),
               trailing: Text(
                 "R\$" + double.parse(valorProduto).toStringAsFixed(2),
                 style: TextStyle(

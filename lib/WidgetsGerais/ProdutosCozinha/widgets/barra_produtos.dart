@@ -1,41 +1,55 @@
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_website/WidgetsGerais/ProdutosCozinha/widgets/data_produtos.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Widget barraProdutos() {
-  return Container(
-    color: Colors.white,
-    margin: EdgeInsets.all(4),
-    padding: EdgeInsets.all(5),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Expanded(
+  TextStyle style = GoogleFonts.oxygen(
+    fontSize: 17,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+  );
+  Faker faker = Faker();
+  return DataTable(
+      horizontalMargin: 0,
+      columns: [
+        DataColumn(
+            label: Container(
+          margin: EdgeInsets.symmetric(vertical: 20),
           child: Text(
             "Produto",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
+            style: style,
           ),
-        ),
-        Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text("Preço",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  )),
-              Text("Qtd",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  )),
-              Text("SubTotal",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  )),
-            ],
+        )),
+        DataColumn(
+            label: Container(
+          child: Text(
+            "Preço",
+            style: style,
           ),
-        )
+        )),
+        DataColumn(
+            label: Container(
+          child: Text(
+            "Quantidade",
+            style: style,
+          ),
+        )),
+        DataColumn(
+            label: Container(
+          child: Text(
+            "SubTotal",
+            style: style,
+          ),
+        )),
       ],
-    ),
-  );
+      rows: faker.lorem
+          .words(3)
+          .map((e) => dataProdutos(
+                produto: e,
+                preco: e,
+                quantidade: e.length,
+                subTotal: e,
+              ))
+          .toList());
 }
