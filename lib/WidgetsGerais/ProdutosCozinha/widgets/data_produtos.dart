@@ -8,8 +8,8 @@ DataRow dataProdutos({
 }) {
   return DataRow(cells: [
     DataCell(Text(produto)),
-    DataCell(Text("R\$" + preco)),
+    DataCell(Text("R\$" + double.parse(preco).toStringAsFixed(2))),
     DataCell(Text(quantidade.toString())),
-    DataCell(Text("R\$" + subTotal)),
+    DataCell(Text("R\$" + double.parse(subTotal).toStringAsFixed(2))),
   ]);
 }

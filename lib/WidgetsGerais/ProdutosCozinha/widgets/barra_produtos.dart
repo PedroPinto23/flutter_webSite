@@ -5,10 +5,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 Widget barraProdutos() {
   TextStyle style = GoogleFonts.oxygen(
-    fontSize: 17,
+    fontSize: 16,
     fontWeight: FontWeight.w600,
     color: Colors.black,
   );
+
+  /// DADOS FALSOS PARA TESTE
   Faker faker = Faker();
   return DataTable(
       horizontalMargin: 0,
@@ -43,13 +45,15 @@ Widget barraProdutos() {
           ),
         )),
       ],
+
+      /// substituir "faker.lorem.words(3)" pelos seus respectivos dados
       rows: faker.lorem
           .words(3)
           .map((e) => dataProdutos(
                 produto: e,
-                preco: e,
+                preco: e.length.toString(),
                 quantidade: e.length,
-                subTotal: e,
+                subTotal: e.length.toString(),
               ))
           .toList());
 }
