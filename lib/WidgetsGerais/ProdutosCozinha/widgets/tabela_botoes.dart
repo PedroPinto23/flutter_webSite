@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_website/Widgets/ProdutosCozinha/widgets/botao.dart';
+import 'package:flutter_website/WidgetsGerais/ProdutosCozinha/widgets/botao.dart';
 
 class TabelaBotoes extends StatelessWidget {
   @override

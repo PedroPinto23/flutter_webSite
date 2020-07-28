@@ -1,6 +1,6 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_website/Widgets/ProdutosTabela/widgets/card_produto.dart';
+import 'package:flutter_website/WidgetsGerais/ProdutosTabela/widgets/card_produto.dart';
 
 class TabBarProdutos extends StatelessWidget {
   @override

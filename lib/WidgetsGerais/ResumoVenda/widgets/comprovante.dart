@@ -94,7 +94,7 @@ class Comprovante extends StatelessWidget {
               title: Text("Consumo"),
               subtitle: Text(nomeProduto),
               trailing: Text(
-                valorProduto,
+                "R\$" + double.parse(valorProduto).toStringAsFixed(2),
                 style: TextStyle(
                   color: Colors.green[900],
                 ),

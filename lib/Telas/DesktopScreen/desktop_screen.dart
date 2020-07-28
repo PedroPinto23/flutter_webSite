@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_website/Widgets/ProdutosCozinha/produtos_cozinha.dart';
-import 'package:flutter_website/Widgets/ProdutosTabela/produtos_tabela.dart';
-import 'package:flutter_website/Widgets/ResumoVenda/resumo_venda.dart';
+import 'package:flutter_website/WidgetsGerais/ProdutosCozinha/produtos_cozinha.dart';
+import 'package:flutter_website/WidgetsGerais/ProdutosTabela/produtos_tabela.dart';
+import 'package:flutter_website/WidgetsGerais/ResumoVenda/resumo_venda.dart';
 
 class DesktopScreen extends StatelessWidget {
   @override
